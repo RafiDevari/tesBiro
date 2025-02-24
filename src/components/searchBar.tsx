@@ -4,7 +4,7 @@ interface SearchBarProps {
 
 export default function SearchBar({title}: SearchBarProps) {
     return (
-      <div className="border border-gray-500 flex items-center bg-gray-100 rounded-md px-3 py-2 w-full md:w-fit">
+      <div className="border border-gray-500 flex items-center rounded-md px-3 py-2 w-full md:w-fit">
         <input
           type="text"
           placeholder={title}
