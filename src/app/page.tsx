@@ -13,6 +13,8 @@ export default function HomePage() {
     strata: [],
   });
 
+  const [searchQuery, setSearchQuery] = useState(""); // Add search state
+
   return (
     <main className="bg-blue-30 my-12 mx-16 flex flex-col gap-4">
       {/* Komponen Card */}
@@ -29,14 +31,14 @@ export default function HomePage() {
 
       {/* Search Bar */}
       <div>
-        <SearchBar title="CARI PROGRAM STUDI" />
+        <SearchBar title="CARI PROGRAM STUDI" setSearchQuery={setSearchQuery} /> {/* Pass search setter */}
       </div>
 
       <div className="flex flex-col lg:flex-row-reverse gap-4 md:gap-16">
         <TableKecil setFilters={(faculties, strata) => setFilters({ faculties, strata })} />
 
-        <TableBesar filters={filters} />
-      </div>
+        <TableBesar filters={filters} searchQuery={searchQuery} /> {/* Pass search query */}
+      </div> 
     </main>
   );
 }

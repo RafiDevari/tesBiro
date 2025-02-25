@@ -15,8 +15,8 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
   const [faculties, setFaculties] = useState<Faculty[]>([]);
   const [selectedFaculties, setSelectedFaculties] = useState<string[]>([]);
   const [selectedStrata, setSelectedStrata] = useState<string[]>([]);
-  const [isFakultasOpen, setIsFakultasOpen] = useState(true);
-  const [isStrataOpen, setIsStrataOpen] = useState(true);
+  const [isFakultasOpen, setIsFakultasOpen] = useState(false);
+  const [isStrataOpen, setIsStrataOpen] = useState(false);
 
   useEffect(() => {
     fetch("http://127.0.0.1:8000/faculties")
