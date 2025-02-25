@@ -92,8 +92,8 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
                     <td className="pl-4 py-2">{item.akreditasi}</td>
                     <td className="pl-4 py-2">{item.surat}</td>
                     <td className="pr-4">
-                    <button className="relative flex justify-center items-center bg-gradient-to-l from-[#006633] via-[#038A47] via-70% to-[#D5D800] rounded-md">
-                      <div className="flex justify-center items-center bg-white rounded-md transition-all duration-200 group-hover:scale-90 p-1">
+                    <button className="relative flex justify-center items-center bg-gradient-to-l from-[#006633] via-[#038A47] via-70% to-[#D5D800] rounded-sm">
+                      <div className="flex justify-center items-center bg-white rounded-sm transition-all duration-200 group-hover:scale-90 p-1">
                         <img className="w-4 h-4" src="/images/donlod.svg" alt="Download" />
                       </div>
                     </button>
