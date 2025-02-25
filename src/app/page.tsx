@@ -34,9 +34,94 @@ export default function HomePage() {
 
         <div className="flex flex-col lg:flex-row-reverse gap-4 md:gap-16">
           {/* Small Table - On Top (Mobile), On Right (Desktop) */}
-          <div className="w-full lg:w-1/4 overflow-x-auto bg-slate-300 rounded-lg">
-            ss
+
+
+
+
+          <div className="font-semibold w-full lg:w-1/4 overflow-x-auto bg-gray-100 rounded-lg p-4 flex flex-col gap-4">
+            <div className="text-green-700 ">
+              Filter
+            </div>
+            <div className="flex flex-col gap-2 text-sm">
+
+
+
+              <div className="flex flex-col gap-2">
+
+
+                <div className="flex justify-between">
+                  <div className="">Fakultas</div>
+                  <div className=""><button><img src="/images/arrow.svg" alt="" /></button></div>
+                </div>
+
+                <div className="flex flex-col gap-2 font-medium">
+                  <div className="flex gap-4 font-medium">
+                    <div className="justify-center items-center flex">
+                      <input type="checkbox" name="" id="" className="w-4 h-4 " />
+                    </div>
+                    <div>
+                      Fakultas Kedokteran
+                    </div>
+                  </div>
+                  <div className="flex gap-4 font-medium">
+                    <div className="justify-center items-center flex">
+                      <input type="checkbox" name="" id="" className="w-4 h-4 " />
+                    </div>
+                    <div>
+                      Fakultas Hukum
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+
+
+
+              <div className="flex flex-col gap-2">
+
+
+                <div className="flex justify-between">
+                  <div className="">Strata</div>
+                  <div className=""><button><img src="/images/arrow.svg" alt="" /></button></div>
+                </div>
+
+                <div className="flex flex-col font-medium gap-2">
+                  <div className="flex gap-4">
+                    <div className="justify-center items-center flex">
+                      <input type="checkbox" name="" id="" className="w-4 h-4 " />
+                    </div>
+                    <div>
+                      Diploma
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="justify-center items-center flex">
+                      <input type="checkbox" name="" id="" className="w-4 h-4 " />
+                    </div>
+                    <div>
+                      Sarjana
+                    </div>
+                  </div>
+                </div>
+
+              
+              </div>
+              
+
+
+
+            </div>
           </div>
+
+
+
+
+
+
+
+
+
 
           {/* Big Table - On Bottom (Mobile), On Left (Desktop) */}
           <div className="w-full lg:w-3/4 flex flex-col gap-4">
