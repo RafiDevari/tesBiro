@@ -86,15 +86,18 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
                 </tr>
               ) : paginatedData.length > 0 ? (
                 paginatedData.map((item, index) => (
-                  <tr key={index} className="bg-gray-100 hover:bg-white hover:text-black text-gray-600 text-sm">
+                  <tr key={index} className="group bg-gray-100 hover:bg-white hover:text-black text-gray-600 text-sm">
                     <td className="pl-4 py-2">{item.nama_prodi}</td>
                     <td className="pl-4 py-2">{item.strata}</td>
                     <td className="pl-4 py-2">{item.akreditasi}</td>
                     <td className="pl-4 py-2">{item.surat}</td>
                     <td className="pr-4">
-                      <button className="w-6 h-6">
-                        <img className="w-full h-full" src="/images/buku.svg" alt="Detail" />
-                      </button>
+                    <button className="relative flex justify-center items-center bg-gradient-to-l from-[#006633] via-[#038A47] via-70% to-[#D5D800] rounded-md">
+                      <div className="flex justify-center items-center bg-white rounded-md transition-all duration-200 group-hover:scale-90 p-1">
+                        <img className="w-4 h-4" src="/images/donlod.svg" alt="Download" />
+                      </div>
+                    </button>
+
                     </td>
                   </tr>
                 ))
