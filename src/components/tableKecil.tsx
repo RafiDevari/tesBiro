@@ -74,7 +74,7 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
                   checked={selectedFaculties.includes(faculty.id)}
                   onChange={() => handleFacultyChange(faculty.id)}
                 />
-                <div>{faculty.nama}</div>
+                <div className="font-normal text-gray-600">{faculty.nama}</div>
               </div>
             ))}
         </div>
@@ -103,7 +103,7 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
                   checked={selectedStrata.includes(strata)}
                   onChange={() => handleStrataChange(strata)}
                 />
-                <div>{strata}</div>
+                <div className="font-normal text-gray-600">{strata}</div>
               </div>
             ))}
         </div>
