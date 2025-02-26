@@ -110,7 +110,8 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
           </table>
         </div>
       </div>
-      <div className="p-4 grid grid-rows-2 md:grid-cols-3 md:gap-4">
+
+      <div className="p-4 grid grid-rows-2 md:grid-rows-1 md:grid-cols-3 md:gap-4">
         <div className="hidden md:flex p-2 text-center"></div>
         <div className="p-2 text-center justify-center flex gap-4">
           <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>

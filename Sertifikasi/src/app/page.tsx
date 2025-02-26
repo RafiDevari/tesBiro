@@ -16,7 +16,7 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState(""); // Add search state
 
   return (
-    <main className="bg-blue-30 my-12 mx-16 flex flex-col gap-4">
+    <main className=" my-12 mx-8 md:mx-16 flex flex-col gap-4">
       {/* Komponen Card */}
       <div>
         <Card title="Sertifikat Akreditasi" />
