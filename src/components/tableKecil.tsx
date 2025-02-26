@@ -46,7 +46,7 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
   };
 
   return (
-    <div className="font-semibold w-full lg:w-1/4 overflow-x-auto bg-gray-100 rounded-lg p-4 flex flex-col gap-4 h-fit">
+    <div className="font-semibold w-full lg:w-1/4 overflow-x-auto bg-gray-100/70 rounded-lg p-4 flex flex-col gap-4 h-fit">
       <div className="text-green-700">Filter</div>
 
       <div className="flex flex-col gap-2 text-sm">
@@ -95,7 +95,7 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
           </div>
 
           {isStrataOpen &&
-            ["Diploma", "Sarjana"].map((strata) => (
+            ["Diploma", "Sarjana","Master","Doktoral"].map((strata) => (
               <div key={strata} className="flex gap-4">
                 <input
                   type="checkbox"
