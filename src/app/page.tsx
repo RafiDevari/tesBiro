@@ -31,7 +31,7 @@ export default function HomePage() {
 
       {/* Search Bar */}
       <div>
-        <SearchBar title="CARI PROGRAM STUDI" setSearchQuery={setSearchQuery} /> {/* Pass search setter */}
+        <SearchBar title="Cari Program Studi" setSearchQuery={setSearchQuery} /> {/* Pass search setter */}
       </div>
 
       <div className="flex flex-col lg:flex-row-reverse gap-4 md:gap-16">
