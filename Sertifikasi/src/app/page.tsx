@@ -1,11 +1,9 @@
 "use client";
-import Image from "next/image";
-import Card from "@/components/card";
-import myImage from "@/public/images/bunga.png";
+import Card from "@/components/Card";
 import SearchBar from "@/components/searchBar";
 import React, { useState } from "react";
-import TableBesar from "@/components/tableBesar";
-import TableKecil from "@/components/tableKecil";
+import TableBesar from "@/components/TableSertifikasi";
+import TableKecil from "@/components/FilterSertifikasi";
 
 export default function HomePage() {
   const [filters, setFilters] = useState<{ faculties: string[]; strata: string[] }>({
@@ -13,32 +11,31 @@ export default function HomePage() {
     strata: [],
   });
 
-  const [searchQuery, setSearchQuery] = useState(""); // Add search state
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <main className=" my-12 mx-8 md:mx-16 flex flex-col gap-4">
       {/* Komponen Card */}
-      <div>
+      <header>
         <Card title="Sertifikat Akreditasi" />
-      </div>
+      </header>
 
       {/* Text */}
-      <div>
-        <p>
+      <article className="text-sm lg:text-base text-justify">
           UI GreenMetric World University Rankings adalah peringkat universitas yang berfokus pada kinerja universitas dalam pengelolaan lingkungan dan keberlanjutan. Peringkat diterbitkan setiap tahun oleh Universitas Indonesia berdasarkan indikator seperti energi, limbah, transportasi, air, dan pendidikan lingkungan.
-        </p>
-      </div>
+      </article>
 
       {/* Search Bar */}
-      <div>
+      <section>
         <SearchBar title="Cari Program Studi" setSearchQuery={setSearchQuery} /> {/* Pass search setter */}
-      </div>
+      </section>
 
-      <div className="flex flex-col lg:flex-row-reverse gap-4 md:gap-16">
+      {/* table  */}
+      <section className="flex flex-col lg:flex-row-reverse gap-4 lg:gap-16">
         <TableKecil setFilters={(faculties, strata) => setFilters({ faculties, strata })} />
 
         <TableBesar filters={filters} searchQuery={searchQuery} /> {/* Pass search query */}
-      </div> 
+      </section> 
     </main>
   );
 }

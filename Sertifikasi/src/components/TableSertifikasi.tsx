@@ -70,6 +70,7 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
       <div className="bg-white rounded-lg overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[600px]">
+            {/* Head */}
             <thead>
               <tr className="w-full bg-green-400/10 text-green-800 text-sm">
                 <th className="text-start pl-4 py-2">Program Studi</th>
@@ -79,10 +80,19 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
                 <th className="text-start pl-4 py-2"></th>
               </tr>
             </thead>
+            {/* data */}
             <tbody>
               {error ? (
                 <tr>
                   <td colSpan={5} className="text-red-500 text-center">Error fetching data</td>
+                </tr>
+              ) : loading ? (
+                <tr>
+                  <td colSpan={5} className="text-gray-500 text-center py-4">
+                    <div className="flex justify-center">
+                      <div className="w-6 h-6 border-4 border-green-700 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  </td>
                 </tr>
               ) : paginatedData.length > 0 ? (
                 paginatedData.map((item, index) => (
@@ -111,6 +121,8 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
         </div>
       </div>
 
+      {/* Pagination */}
+
       <div className="p-4 grid grid-rows-2 md:grid-rows-1 md:grid-cols-3 md:gap-4">
         <div className="hidden md:flex p-2 text-center"></div>
         <div className="p-2 text-center justify-center flex gap-4">
@@ -131,10 +143,11 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
             <img className="rotate-90" src="images/arrow.svg" alt="Next" />
           </button>
         </div>
+
         <div className="bg-white p-2 justify-center md:justify-end flex gap-4">
           <div className="text-sm flex items-center">Tampilkan</div>
           <select
-            className="font-semibold bg-green-400/30 px-3 gap-2 items-center text-xs rounded-md text-green-700"
+            className="font-semibold bg-green-400/10 px-3 gap-2 items-center text-xs rounded-md text-green-700"
             value={itemsPerPage}
             onChange={(e) => setItemsPerPage(Number(e.target.value))}
           >
@@ -144,6 +157,7 @@ export default function TableBesar({ filters, searchQuery }: TableBesarProps) {
             <option value={100}>100</option>
           </select>
         </div>
+
       </div>
     </div>
   );
