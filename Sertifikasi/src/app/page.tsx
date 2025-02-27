@@ -1,6 +1,6 @@
 "use client";
 import Card from "@/components/Card";
-import SearchBar from "@/components/searchBar";
+import SearchBar from "@/components/SearchBar";
 import React, { useState } from "react";
 import TableBesar from "@/components/TableSertifikasi";
 import TableKecil from "@/components/FilterSertifikasi";

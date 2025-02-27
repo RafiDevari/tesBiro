@@ -5,11 +5,11 @@ interface SearchBarProps {
 
 export default function SearchBar({ title, setSearchQuery }: SearchBarProps) {
   return (
-    <div className="border border-gray-500 flex items-center rounded-md px-3 py-2 w-full md:w-fit">
+    <div className="border border-gray-500 flex items-center rounded-md px-3 py-2 w-full lg:w-fit">
       <input
         type="text"
         placeholder={title}
-        className="bg-transparent outline-none placeholder-gray-400 text-xs font-medium font-sans w-full md:w-80"
+        className="bg-transparent outline-none placeholder-gray-400 text-xs font-medium font-sans w-full lg:w-80"
         onChange={(e) => setSearchQuery(e.target.value)} // Update search query
       />
       <button>
