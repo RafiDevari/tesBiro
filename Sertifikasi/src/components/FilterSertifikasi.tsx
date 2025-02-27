@@ -49,7 +49,7 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
 
       <div className="flex flex-col gap-4 text-sm">
         {/* Fakultas */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col">
           <button
             onClick={() => setIsFakultasOpen(!isFakultasOpen)}
             className="flex justify-between items-center hover"
@@ -84,7 +84,7 @@ export default function TableKecil({ setFilters }: TableKecilProps) {
         </div>
 
         {/* Strata */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col">
           <button
             onClick={() => setIsStrataOpen(!isStrataOpen)}
             className="flex justify-between items-center"
